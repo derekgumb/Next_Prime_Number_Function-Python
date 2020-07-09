@@ -1,4 +1,4 @@
-This program takes in a user-inputted number and outputs the next higher prime number.
+This program takes in a user-inputted number and outputs the next higher prime number. It assumes that negative numbers cannot be prime.
 
 
 The code is broken up into two functions:

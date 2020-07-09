@@ -13,7 +13,8 @@ def next_prime(num):
                 break
             elif are_you_prime(num) == False:
                 continue
-
+    else:
+        return ("Please input a number.")
 
 def are_you_prime(num):
     is_prime = False
@@ -33,5 +34,5 @@ def are_you_prime(num):
 
 
 user_input = (
-    int(input("Enter a number to find its next higher prime number: ")))
+    int(float(input("Enter a number to find its next higher prime number: "))))
 print(next_prime(user_input))
