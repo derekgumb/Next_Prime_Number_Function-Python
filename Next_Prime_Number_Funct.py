@@ -1,36 +1,33 @@
 # Given a number, return the next higher prime number:
 
 def next_prime(num):
-    is_prime = False
+    prime1 = False
     if num <= 0:
         return ("2 is next prime!")
     elif num > 0:
-        while is_prime == False:
+        while prime1 == False:
             num += 1
-            are_you_prime(num)
-            if are_you_prime(num) == True:
+            if is_prime(num):
                 return (f"{num} is next prime!")
                 break
-            elif are_you_prime(num) == False:
+            elif not is_prime(num):
                 continue
     else:
         return ("Please input a number.")
 
-def are_you_prime(num):
-    is_prime = False
+def is_prime(num):
     dvsr_lst = []
     if num > 0:
-        for i in range(2, num//2+1):
+        for i in range(1, num//2+1):
             if num % i == 0:
                 dvsr_lst.append(i)
             elif num % i != 0:
                 continue
         dvsr_lst.append(num)
         if int(len(dvsr_lst)) > 2:
-            return is_prime
+            return False
         else:
-            is_prime = True
-            return is_prime
+            return True
 
 
 user_input = (
